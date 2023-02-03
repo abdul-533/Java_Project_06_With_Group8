@@ -4,21 +4,23 @@ import HelperFunctions.HelperFunctions;
 
 public class User {
 
-    /*
+       // User içerisinde attribute larin hepsi private tanımlanmalı.
 
-        User içerisinde attribute larin hepsi private tanımlanmalı.
+    private String fullName;
+    private String city;
+    private String address;
+    private   String zipCode;
+    private   double myPrice;
+    private   String shippingTrackingNumber;
 
-            String fullName;
-            String city;
-            String address;
-            String zipCode;
-            double myPrice
-            String shippingTrackingNumber
+      //  Attribute lar burada tanımlanıcak -->
 
-        Attribute lar burada tanımlanıcak -->
-
-     */
-
+    public User(String fullName, String city, String address, String zipCode) {
+        this.fullName = fullName;
+        this.city = city;
+        this.address = address;
+        this.zipCode = zipCode;
+    }
 
     /*
 
@@ -34,6 +36,13 @@ public class User {
 
      */
 
+    public double getMyPrice() {
+        return myPrice;
+    }
+
+    public void setMyPrice(double price) {
+        this.myPrice+= price;
+    }
     /*
 
         myPrice için bir getter bir de setter method oluşmalı
