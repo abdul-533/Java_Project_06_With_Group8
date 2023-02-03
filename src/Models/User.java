@@ -15,12 +15,15 @@ public class User {
 
       //  Attribute lar burada tanımlanıcak -->
 
-    public User(String fullName, String city, String address, String zipCode) {
+    public User(String fullName,  String address, String city, String zipCode) {
         this.fullName = fullName;
-        this.city = city;
+        this.city = HelperFunctions.checkCity(city);
         this.address = address;
-        this.zipCode = zipCode;
+        this.zipCode = HelperFunctions.checkZipCode(zipCode);
+        this.shippingTrackingNumber=HelperFunctions.generateShippingTrackingNumber(this.fullName,this.city,this.zipCode);
     }
+
+
 
     /*
 
